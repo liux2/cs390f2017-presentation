@@ -57,226 +57,110 @@
         </section>
 
         <section>
-          <h2>What is prejudice?</h2>
-          <p>A hostile or negative attitude toward people in a distinguishable group, based solely on their membership in that group</p>
+          <h2>How did we get the data?</h2>
+          <ul>
+            <li>Kaggle</li>
+            <li>Las Vegas mass shooting</li>
+            <li>Question:</li>
+              <p>Can we find patterns from the mass shooting cases, so that we can prevent it from happening?</p>
+          </ul>
         </section>
 
         <section>
-          <h2>Three Components of prejudice</h2>
-          <p><b class="orange">1.</b> Stereotypes: The Cognitive Component</p>
-          <p><b class="orange">2.</b> Emotions: The Affective Component</p>
-          <p><b class="orange">3.</b> Discrimination: The Behavioral Component</p>
+            <h2>Data set introduction</h2>
+            <p><b class="orange">Including:</b></p>
+            <p>ID, Title, City, State, Date, Summary,	Fatalities,	Injured, Total victims,	Mental Health Issues,	Race,	Gender,	Latitude,	Longitude</p>
         </section>
 
         <section>
-          <h2>Stereotypes: The Cognitive Component</h2>
-          <p>A generalization about a group of people, in which certain traits are assigned to virtually all members of the group, regardless of actual variation among the members</p>
-          <p>e.g. (We all have stereotypes: Jewish people are very rich/African people are very poor)</p>
+          <section>
+            <h2>Prehandleing</h2>
+            <p><b class="orange">1.</b> Missing location information</p>
+            <p><b class="orange">2.</b> Title difficult to unerstand</p>
+            <p><b class="orange">3.</b> Data not tiddy</p>
+          </section>
+          <section data-background-transition="none" data-background="images/data.png">
+          </section>
+          <section data-background-transition="none" data-background="images/tiddy.png">
+          </section>
         </section>
 
         <section>
-          <h2>Why do we have stereotypes?</h2>
-          <p><b class="orange">1.</b> Media</p>
-          <p><b class="orange">2.</b> Illusory Correlation</p>
-          <p>The tendency to see relationships, or correlations, between events that are actually unrelated</p>
-          <p>e.g. (Western people tend to believe that the black dog would bring bad luck)</p>
+          <h2>Data details</h2>
+          <p>Source: Mass shooting data(1966 - 2017)</p>
+          <ul>
+            <li>Chosen from Kaggle website.</li>
+            <li>Definition of Mass shooting: greater than or equal to three victims.</li>
+            <li>Goal:  </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>1st Question:</h2>
+          <p><b class="orange">How can we use maps to analyze the data?</b></p>
+          <pre><code class="hljs">
+            Abandon dot plotting <- Too messy
+            New library(maps) and library(ggmap)
+          </code></pre>
+        </section>
+
+        <section data-background-transition="none" data-background="images/map.png">
+        </section>
+
+        <section data-background-transition="none" data-background="images/map1.png">
+        </section>
+
+        <section data-background-transition="none" data-background="images/color.jpg" style="background: rgba(29,31,33,0.9)">
+          <h2>2nd Question:</h2>
+          <p><b class="orange">The Same Victims?</b></p>
+          <p>As the picture shows, Florida & Texas has the similar color</p>
+        </section>
+
+        <section data-background-transition="none" data-background="images/filter.png" style="background: rgba(29,31,33,0.9)">
+          <h2>Filter the data</h2>
+          <ul>
+            <li>Left only Florida and Texas</li>
+            <li>Add all the victim from each year together</li>
+          </ul>
+        </section>
+
+        <section data-background-transition="none" data-background="images/ttest.jpg" style="background: rgba(29,31,33,0.9)">
+          <h2>T-Test</h2>
+          <ul>
+            <li>P-Value ≈ 1</li>
+            <li>Those two states almost have the same Victims</li>
+          </ul>
+          </section>
+
+        <section>
+          <section>
+          <h2>Does mass shooting has any relationship with the age of shooter?</h2>
+          </section>
+          <section data-background-transition="none" data-background="images/agecut.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+          <h2>Does mass shooting has any relationship with the mental state of shooter?</h2>
+          </section>
+          <section data-background-transition="none" data-background="images/mental.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+          <h2>Conbind together</h2>
+          </section>
+          <section data-background-transition="none" data-background="images/ageMental.png">
+          </section>
         </section>
 
         <section>
           <h2>What's more?</h2>
-          <p>Stereotypes can set up expectations to groups which have been misunderstood</p>
-          <p>e.g. (Asain children were believed to have better porformance in academic area, but not all people are good at it)</p>
-        </section>
-
-        <section>
-          <h2>What's more?</h2>
-            <ul>
-              <li>There are differences between individuals.</li>
-                <p> (both man and woman can be aggressive or gentle)</p>
-              <li>Hostile sexists</li>
-                <p> Women are inferior to men because they are inherently less intelligent, less competent, less brave, less capable of math and science, and so on.</p>
-              <li>Benevolent sexists</li>
-                <p> Women are kinder than men, more empathic, more nurturing, and so on.</p>
-            </ul>
-        </section>
-
-        <section>
-          <h2>Emotions: The Affective Component</h2>
           <ul>
-            <li>With emotion, we wouldn't be logic anymore</li>
-            <li>We only see information that confirms how right we are about "those people"</li>
+            <li>Solve NA that has been generated</li>
           </ul>
-          <p></p>
-          <p>That can lead to implicit prejudice</p>
-          <p>(People pretend to be consistent with the PC environment, but keep negative feelings under the surface)</p>
-        </section>
-
-        <section>
-          <h2>Discrimination: The Behavioral Component</h2>
-          <p>It is unjustified negative or harmful action toward a member of a group solely because of his or her membership in that group</p>
-          <ul>
-            <li>Microaggressions</li>
-            <p>Small actions or word choices that seem on their face to have no malicious intent but that are thought of as a kind of violence nonetheless</p>
-          </ul>
-        </section>
-
-        <section data-background-transition="none" data-background="images/Racism.jpg" style="">
-        </section>
-
-        <section data-background-transition="none" data-background="images/Racism.jpg" style="background: rgba(29,31,33,0.9)">
-          <h2>Modern Racism and Other Implicit Prejudices</h2>
-          <ul>
-            <li>Laws determine that discrimination is illegal</li>
-            <li>People become more careful to maintaining their prejudiced feelings</li>
-            <li>That is called modern racism</li>
-            <p>	Outwardly acting unprejudiced while inwardly maintaining prejudiced attitudes</p>
-          </ul>
-          <br /><small><a title="Multiculturalism" href="https://flickr.com/photos/pug50/5251512844">Multiculturalism</a> flickr photo by <a href="https://flickr.com/people/pug50">Pug50</a> under a <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons (BY) license</a> </small>
-        </section>
-
-        <section>
-          <h2>How do we measure implicit prejudice?</h2>
-          <ul>
-            <li>Bogus pipeline</li>
-            <p>Researchers convinced participants that the polygraph is effective, but it is actually fake.</p>
-            <p>e.g. (Do you remember the TV program Jimmy Show)<p>
-            <li>Implicit Association Test (IAT)</li>
-            <ol>
-              <li>Computer based research</li>
-              <li>The study participant can't "fool" the machine</li>
-            </ol>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Under what situation that people can activate their implicit prejudices?</h2>
-          <p>When people are stressed, angry, have suffered a blow to their self-esteem, or otherwise are not in full control of their conscious intentions.</p>
-          <p>They often behave with greater aggression or hostility toward a stereotyped target than toward members of their own group.</p>
-        </section>
-
-        <section>
-          <h2>Under what situation that people can activate their implicit prejudices?</h2>
-          <p>Two-Step Model of the Cognitive</P>
-          <ul>
-            <li>A stereotype is automatically activated when a person encounters a member of a minority group, but the stereotype can be ignored or refuted through conscious processing</li>
-            <li>However, when the person is busy, overwhelmed, distracted, or not paying much attention, the person may not be able to initiate that controlled level of processing.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>The Effects of Prejudice on the Victim</h2>
-          <p>Self-Fulfilling prophecies</p>
-          <p>	The case wherein people have an expectation about what another person is like, which influences how they act toward that person, which causes that person to behave consistently with people's original expectations, making the expectations come true.</p>
-          <p>e.g. (If you believe that Amy is stupid, you probably will not ask her interesting questions, and you will not listen intently while she is talking)</p>
-        </section>
-
-        <section>
-          <h2>Stereotype Threat</h2>
-          <p>The apprehension experienced by members of a group that their behavior might confirm a cultural stereotype</p>
-          <p>e.g. (The victim often internalizes these societal expectations and comes to believe them: "I guess I must be stupid if everybody thinks so.")</p>
-        </section>
-
-        <section data-background-transition="none" data-background="images/Prejudice.jpg" style="">
-        </section>
-
-        <section data-background-transition="none" data-background="images/Prejudice.jpg" style="background: rgba(29,31,33,0.9)">
-          <h2>What Causes Prejudice?</h2>
-          <ul>
-            <li>prejudice may originally have served as a survival mechanism inducing people to favor their own families and tribes.</li>
-            <li>However, under certain situations</li>
-          </ul>
-          <p><b class="orange">Four aspects:</b></p>
-          <br /><small><a title="Prejudice" href="https://flickr.com/photos/brainflakes/2757943378">Prejudice</a> shared by <a href="https://flickr.com/people/brainflakes">brainflakes</a> under a <a href="https://creativecommons.org/licenses/by-nc/2.0/">Creative Commons (BY-NC) license</a> </small>
-        </section>
-
-        <section>
-          <h2>Pressures to Conform: Normative Rules</h2>
-          <p>Institutional Discrimination:</p>
-          <p>Practices that discriminate, legally or illegally, against a minority group by virtue of its ethnicity, gender, culture, age, sexual orientation, or other target of societal or company prejudice</p>
-        </section>
-
-        <section>
-          <h2>Pressures to Conform: Normative Rules</h2>
-          <ul>
-            <li>Institutionalized Racism</li>
-            <p>Racist attitudes that are held by the vast majority of people living in a society where stereotypes and discrimination are the norm</p>
-            <li>Institutionalized Sexism</li>
-            <p>Sexist attitudes that are held by the vast majority of people living in a society where stereotypes and discrimination are the norm</p>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Pressures to Conform: Normative Rules</h2>
-          <p>Normative Conformity:</p>
-          <p>The tendency to go along with the group in order to fulfill the group's expectations and gain acceptance</p>
-        </section>
-
-        <section>
-          <h2>Social Categorization: Us Versus Them</h2>
-          <p>Prejudice is enabled by the human tendency to organize people into in-groups and out-groups.</p>
-        </section>
-
-        <section>
-          <h2>Social Categorization: Us Versus Them</h2>
-          <ul>
-            <li>In-Group Bias</li>
-            <p>the tendency to treat members of our own group more positively than members of the outgroup</p>
-            <li>Out-Group homogeneity</li>
-            <p>The perception that individuals in the out-group are more similar to each other (homogeneous) than they really are, as well as more similar than members of the ingroup are</p>
-          </ul>
-        </section>
-
-        <section>
-          <h2>How We Assign Meaning: Attributional Biases</h2>
-          <ul>
-            <li>Ultimate Attribution Error</li>
-            <p>The tendency to make dispositional attributions about an entire group of people</p>
-            <li>Blaming the Victim</li>
-            <p>The tendency to blame individuals (make dispositional attributions) for their victimization, typically motivated by a desire to see the world as a fair place</p>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Economic Competition: Realistic Conflict Theory Realistic conflict theory</h2>
-          <ul>
-            <li>Realistic Conflict Theory</li>
-            <p>The idea that limited resources lead to conflict between groups and result in increased prejudice and discrimination</p>
-            <li>Scapegoating</li>
-            <p>The tendency for individuals, when frustrated or unhappy, to displace aggression onto groups that are disliked, visible, and relatively powerless</p>
-            <p>e.g. (Americans blame immigrants for high unemployment rate)</p>
-          </ul>
-        </section>
-
-        <section data-background-transition="none" data-background="images/Calm.jpg" style="">
-        </section>
-
-        <section data-background-transition="none" data-background="images/Calm.jpg" style="background: rgba(29,31,33,0.9)">
-          <h1>How Can Prejudice Be Reduced?</h1>
-          <br /><small><a title="2014_BL_Portadown_NI_Prof_001" href="https://flickr.com/photos/thebiglunch/14448280401/">2014_BL_Portadown_NI_Prof_001</a> shared by <a href="https://flickr.com/people/thebiglunch">The Big Lunch</a> under a <a href="https://creativecommons.org/licenses/by-sa/2.0/">Creative Commons (BY-SA) license</a> </small>
-        </section>
-
-        <section>
-          <h2>The Contact Hypothesis</h2>
-          <p>The most important way to reduce prejudice between racial and ethnic groups is through contact, bringing in-group and out-group members together.</p>
-        </section>
-
-        <section>
-          <h2>When Contact Reduces Prejudice: Six Conditions</h2>
-          <ol>
-            <li>Mutual Interdependence</li>
-            <p>The situation that exists when two or more groups need to depend on one another to accomplish a goal that is important to each of them</p>
-            <li>A common goal</li>
-            <li>Equal status</li>
-            <li>Informal, interpersonal contact</li>
-            <li>Multiple contacts</li>
-            <li>Social norms of equality</li>
-          </ol>
-        </section>
-
-        <section>
-          <h2>Cooperation and Interdependence: The Jigsaw Classroom</h2>
-          <p>A classroom setting designed to reduce prejudice and raise the self-esteem of children by placing them in small, desegregated groups and making each child dependent on the other children in the group to learn the course material and do well in the class</p>
-        </section>
 
       </div>
 
