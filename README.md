@@ -1,7 +1,7 @@
 # cs390f2017-presentation
 Presentation slides for Allegheny College cs390 final presentation
 
-This repository is created for me to have a template for my presentation. you can view the slide at [here](http://cdn.rawgit.com/liux2/Psych_Presentation_Chap13/master/Prejudice_2017_Summer.html).
+This repository is created for me to have a template for my presentation. you can view the slide at [here](http://cdn.rawgit.com/liux2/cs390f2017-presentation/master/cs390_presentation.html).
 
 ## Installation Instructions
 
